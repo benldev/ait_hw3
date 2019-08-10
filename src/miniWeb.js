@@ -7,7 +7,7 @@ class Request{
     let firstLine = lines[0].split(' ');
     this.path = firstLine[1];
     if(this.path !== '/' && this.path[this.path.length - 1] === '/'){
-      this.path = this.path.substring(0, -1);
+      this.path = this.path.substring(0, this.path.length - 1);
     }
     this.method = firstLine[0];
     this.headers = {};
